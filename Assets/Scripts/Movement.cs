@@ -32,7 +32,6 @@ public class Movement : MonoBehaviour
             {
                 audioSource.Play();
             }
-            
         }
         else
         {
@@ -51,7 +50,6 @@ public class Movement : MonoBehaviour
             ApplyRotation(-rotationThrust);
         }
     }
-
     void ApplyRotation(float rotationThisFrame)
     {
         rb.freezeRotation = true;   // Freezing rotation so we can manually rotate
