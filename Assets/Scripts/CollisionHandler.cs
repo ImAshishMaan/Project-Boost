@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] float delayTime = 1f;
     private void OnCollisionEnter(Collision other) 
     {
         switch(other.gameObject.tag)
@@ -11,21 +12,35 @@ public class CollisionHandler : MonoBehaviour
                 break;
             case "Finish":
                 print("Congrates! You Won");
-                LoadNextLevel();
+                StartNextLevelSequence();
                 break;
             case "Fuel":
                 print("You got Fuel");
                 break;
             default:
                 print("Sorry, you blew up");
-                ReloadLevel();
+                StartCrashSequence();
                 break;
         }
+    }
+
+    void StartCrashSequence()
+    {
+        GetComponent<Movement>().enabled = false;
+        GetComponent<AudioSource>().enabled = false;
+        Invoke("ReloadLevel", delayTime);
     }
     void ReloadLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    void StartNextLevelSequence()
+    {
+        GetComponent<Movement>().enabled = false;
+        GetComponent<AudioSource>().enabled = false;
+        Invoke("LoadNextLevel", delayTime);
     }
     void LoadNextLevel()
     {
