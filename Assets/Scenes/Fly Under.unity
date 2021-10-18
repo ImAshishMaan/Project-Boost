@@ -534,10 +534,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 30674087, guid: 278cbd81eae62e7458d2777e2759d53b, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: 9864875306c1fba48bc11f518543fe54, type: 3}
+    - target: {fileID: 581744290, guid: 278cbd81eae62e7458d2777e2759d53b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2367843543165472955, guid: 278cbd81eae62e7458d2777e2759d53b, type: 3}
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 4579790077131374672, guid: 278cbd81eae62e7458d2777e2759d53b, type: 3}
+      propertyPath: crashAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 69fcc2bccb2f72344bda7e4d026a3cec, type: 3}
+    - target: {fileID: 4579790077131374672, guid: 278cbd81eae62e7458d2777e2759d53b, type: 3}
+      propertyPath: successAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ad1bc713312f8e47a1b8b692e25a3c5, type: 3}
     - target: {fileID: 9161347903535100953, guid: 278cbd81eae62e7458d2777e2759d53b, type: 3}
       propertyPath: m_RootOrder
       value: 5
